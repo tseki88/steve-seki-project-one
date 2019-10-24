@@ -59,9 +59,16 @@ h4 {
     font-family: "Montserrat", sans-serif;
 }
 
+h1,
+h3,
+h4,
+.button-style,
+.center-align {
+    text-align: center;
+}
+
 h1 {
     font-size: 80px;
-    text-align: center;
     line-height: 80px;
 }
 
@@ -71,7 +78,6 @@ h2 {
 
 h3 {
     font-size: 35px;
-    text-align: center;
     line-height: initial;
     background-color: #9200FF;
 }
@@ -79,7 +85,6 @@ h3 {
 h4 {
     font-weight: bold;
     font-size: 30px;
-    text-align: center;
 }
 
 
@@ -89,7 +94,6 @@ h4 {
 
 .button-style {
     font-size: 25px;
-    text-align: center;
     line-height: 29px;
     background-color: #9200FF;
     color: inherit;
@@ -130,7 +134,6 @@ nav,
 }
 
 
-
 .gallery li {
     width: 30%;
 }
@@ -157,7 +160,6 @@ li a {
 .gram {
     position: relative;
     overflow: hidden;
-    text-align: center;
 }
 
 .wrapper {
@@ -173,7 +175,8 @@ header {
 }
 
 section,
-ul.float-list {
+ul.float-list,
+.footer-top nav {
     clear: both;
 }
 
@@ -200,14 +203,6 @@ img {
 
 address {
     font-style: inherit;
-}
-
-.footer-top nav {
-    clear: both;
-}
-
-.footer-bottom {
-    text-align: center;
 }
 
 .social-list {

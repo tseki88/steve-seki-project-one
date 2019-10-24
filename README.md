@@ -21,3 +21,8 @@
  - Student was able to identify a technical win
  - Student was able to effectively identify a technical challenge
  - Student did not go over time
+
+
+## Personal Checklist of Reminders
+
+ - [ ] Accessibility: img alt, icon aria-hidden/span.sr-only
