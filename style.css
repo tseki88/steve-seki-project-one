@@ -70,6 +70,7 @@ h4,
 h1 {
     font-size: 80px;
     line-height: 80px;
+    margin-bottom: 0.8rem;
 }
 
 h2 {
@@ -78,8 +79,10 @@ h2 {
 
 h3 {
     font-size: 35px;
-    line-height: initial;
+    line-height: 70px;
     background-color: #9200FF;
+    border: 1px solid #FFFFFF;
+    margin-top: 0;
 }
 
 h4 {
@@ -97,6 +100,8 @@ h4 {
     line-height: 29px;
     background-color: #9200FF;
     color: inherit;
+    border: none;
+    padding: 10px 25px;
 }
 
 body {
@@ -122,6 +127,18 @@ nav,
     position: relative;
 }
 
+.contact {
+    padding: 100px 0;
+}
+
+.contact li {
+    margin: 0 100px;
+}
+
+.contact i {
+    font-size: 45px;
+}
+
 .float-list {
     position: relative;
     left: 50%;
@@ -133,16 +150,26 @@ nav,
     right: 50%;
 }
 
-
-.gallery li {
-    width: 30%;
+.title-content {
+    width: 480px;
+    margin: 0 auto;
+    position: relative;
+    top: 35%;
+    transform: translateY(-50%);
 }
 
-.float-list li a,
-.float-list li img {
+.gallery li {
+    width: calc(100% / 3);
+}
+
+.float-list li a {
     display: block;
     margin-left: 1px;
     padding: 3px 10px;
+}
+
+.gram ul {
+    width: 100%;
 }
 
 ul {
@@ -172,6 +199,7 @@ header {
     background-image: url(./assets/header-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 section,
@@ -201,10 +229,43 @@ img {
     width: 50%;
 }
 
+.ticket {
+    padding: 125px 0;
+}
+
+.ticket h2 {
+    margin-top: 6px;
+}
+
+.ticket-image {
+    width: 20%;
+    margin: 0;
+}
+
+.ticket-content-description {
+    width: 80%;
+    padding-left: 5%;
+}
+
+.text-content-left {
+    margin-left: 20%;
+    padding-right: 10%;
+    padding-top: 15%;
+}
+
+.text-content-right {
+    margin-right: 20%;
+    padding-left: 10%;
+    padding-top: 15%;
+}
+
 address {
     font-style: inherit;
 }
 
 .social-list {
-    padding-right: 20px;
+    padding-right: 50px;
+    position: absolute;
+    right: 0;
+    top: 40%;
 }
