@@ -40,6 +40,13 @@ font-family: 'Iceberg', cursive;
 font-family: 'Montserrat', sans-serif;
  */
 
+body {
+    font-size: 20px;
+    line-height: 29px;
+    color: #FFFFFF;
+    background-color: #0F0632;
+}
+
 h1,
 h2,
 .button-style,
@@ -58,6 +65,14 @@ h3,
 h4 {
     font-family: "Montserrat", sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: initial;
+}
+
 
 h1,
 h3,
@@ -95,20 +110,28 @@ h4 {
     text-transform: capitalize;
 }
 
-.button-style {
+.button-style,
+input {
     font-size: 25px;
     line-height: 29px;
-    background-color: #9200FF;
-    color: inherit;
     border: none;
     padding: 10px 25px;
 }
 
-body {
-    font-size: 20px;
-    line-height: 29px;
-    color: #FFFFFF;
-    background-color: #0F0632;
+.button-style {
+    color: inherit;
+    background-color: #9200FF;
+}
+
+input[type="email"] {
+    width: 100%;
+}
+
+input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
 }
 
 .ticket {
@@ -124,15 +147,20 @@ nav,
 .contact {
     margin: 0 auto;
     width: 100%;
-    position: relative;
 }
 
 .contact {
     padding: 100px 0;
 }
 
+.contact ul {
+    width: 70%;
+    margin: 0 auto;
+}
+
 .contact li {
-    margin: 0 100px;
+    width: calc((100% - 24%) / 3);
+    min-width: 210px;
 }
 
 .contact i {
@@ -140,29 +168,31 @@ nav,
 }
 
 .float-list {
-    position: relative;
     left: 50%;
 }
 
 .float-list li {
     display: block;
-    position: relative;
     right: 50%;
 }
 
 .title-content {
     width: 480px;
     margin: 0 auto;
-    position: relative;
     top: 35%;
     transform: translateY(-50%);
 }
 
-.gallery li {
-    width: calc(100% / 3);
+.gram li {
+    width: calc((100% - 8%) / 3);
 }
 
-.float-list li a {
+.gram li:nth-of-type(2),
+.contact li {
+    margin: 0 4%;
+}
+
+.float-list a {
     display: block;
     margin-left: 1px;
     padding: 3px 10px;
@@ -177,16 +207,18 @@ ul {
 }
 
 ul li,
-li a {
+li a,
+address a {
     list-style: none;
     text-decoration: none;
     color: inherit;
 }
 
-.contact,
-.gram {
+nav,
+.position-relative,
+.float-list,
+.float-list li {
     position: relative;
-    overflow: hidden;
 }
 
 .wrapper {
@@ -199,7 +231,6 @@ header {
     background-image: url(./assets/header-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
 }
 
 section,
@@ -223,14 +254,47 @@ img {
     width: 100%;
 }
 
+.content-image {
+    overflow: hidden;
+}
+
+.content-image img {
+    transform: translateY(-1px);
+}
+
 .content-image,
-.content-description {
+.content-description,
+.footer-subcontent {
     margin: 0;
     width: 50%;
 }
 
-.ticket {
-    padding: 125px 0;
+.ticket,
+.contact {
+    padding: 150px 0;
+}
+
+.contact,
+.gram {
+    overflow: hidden;
+}
+
+.gram,
+.footer-top {
+    padding-bottom: 100px;
+}
+
+.footer-top nav {
+    padding: 40px 0;
+}
+
+form {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.gram h2 {
+    margin: 80px;
 }
 
 .ticket h2 {
@@ -247,16 +311,26 @@ img {
     padding-left: 5%;
 }
 
-.text-content-left {
-    margin-left: 20%;
-    padding-right: 10%;
-    padding-top: 15%;
+.text-content-left,
+.text-content-right {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    transform: translateY(-50%);
 }
 
-.text-content-right {
-    margin-right: 20%;
-    padding-left: 10%;
-    padding-top: 15%;
+.text-content-left {
+    left: 10%;
+    right: 55%;
+}
+
+.content h2 {
+    margin: 0 auto;
+}
+
+footer h2,
+footer p {
+    margin: 0;
 }
 
 address {
@@ -268,4 +342,19 @@ address {
     position: absolute;
     right: 0;
     top: 40%;
+}
+
+
+
+.text-content-right {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 10%;
+    left: 55%;
+    transform: translateY(-50%);
+}
+
+.footer-bottom {
+    padding: 10px 0;
 }

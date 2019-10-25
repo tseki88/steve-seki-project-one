@@ -18,7 +18,7 @@
                 <li><a href="">contact</a></li>
             </ul>
         </nav>
-        <div class="title-content">
+        <div class="title-content position-relative">
             <h1>thunder force stadium</h1>
             <h3>presented by hot cops</h3>
         </div>
@@ -48,11 +48,11 @@
         </div>
     </header>
     <main>
-        <section class="content">
+        <section class="content position-relative clearfix">
             <div class="content-image float-right">
                 <img src="./assets/right-image.jpg" alt="side shot of artist singing on stage">
             </div>
-            <div class="content-description wrapper float-left">
+            <div class="content-description clearfix">
                 <div class="text-content-left">
                     <h2>performing line up</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam consectetur mollitia deleniti, fugiat perferendis veniam aliquam eius debitis eaque rerum. Alias recusandae delectus aut voluptatum. Adipisci labore ut fugit ipsum.</p>
@@ -60,11 +60,11 @@
                 </div>
             </div>
         </section>
-        <section class="content">
+        <section class="content position-relative clearfix">
             <div class="content-image float-left">
                 <img src="./assets/left-image.jpg" alt="zoomed in on saxophone, blurred background">
             </div>
-            <div class="content-description wrapper float-right">
+            <div class="content-description clearfix">
                 <div class="text-content-right">
                     <h2>new experiences</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam consectetur mollitia deleniti, fugiat perferendis veniam aliquam eius debitis eaque rerum. Alias recusandae delectus aut voluptatum. Adipisci labore ut fugit ipsum.</p>
@@ -87,7 +87,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact position-relative clearfix">
         <ul class="float-list center-align">
             <li>
                 <a aria-label="links to locations page" href="">
@@ -109,9 +109,9 @@
             </li>
         </ul>
     </section>
-    <section class="gram wrapper clearfix center-align">
+    <section class="gram wrapper position-relavive clearfix center-align">
         <h2>the gram</h2>
-        <ul class="gallery float-list">
+        <ul class="float-list">
             <li>
                 <img src="./assets/gallery-image-1.jpg"
                 alt="full concert stage view from higher elevation, bright lighting">
@@ -124,7 +124,7 @@
             </li>
         </ul>
     </section>
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-top clearfix">
             <div class="wrapper">
                 <nav class="clearfix">
@@ -135,18 +135,18 @@
                         <li><a href="">contact</a></li>
                     </ul>
                 </nav>
-                <div class="float-left">
+                <div class="float-left footer-subcontent">
                     <h2>contact</h2>
                     <address>
-                        <p>info@email.com | 123 - 456 - 7890</p>
+                        <p><a href="mailto:info@email.com">info@email.com</a> | <a href="tel:+11234567890">123 - 456 - 7890</a></p>
                         <p>123 some road, Toronto, ON</p>
                         <p>A5A 5A5, Canada</p>
                     </address>
                 </div>
-                <div class="float-right">
+                <div class="float-right footer-subcontent">
                     <h2>stay updated</h2>
                     <p>Subscribe to our newsletter to stay updated.</p>
-                    <form action="GET">
+                    <form action="GET" class="position-relative">
                         <label for="email-address"></label>
                         <input type="email" id="email-address" placeholder="email address">
                         <label for="subscribe"></label>
@@ -156,7 +156,7 @@
             </div>
         </div>
         <div class="footer-bottom center-align">
-            <copy class="capitalize">copyright &copy; 2019 juno college</copy>
+            <p class="capitalize">copyright &copy; 2019 juno college</p>
         </div>
 
     </footer>
