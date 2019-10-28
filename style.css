@@ -9,9 +9,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 
-/* Global Styling */
-
-
 /* Color palette
 White
 #FFFFFF
@@ -68,13 +65,13 @@ h4 {
     font-family: "Montserrat", sans-serif;
 }
 
+/* reset body line-height */
 h1,
 h2,
 h3,
 h4 {
     line-height: initial;
 }
-
 
 h1,
 h3,
@@ -88,6 +85,8 @@ h1 {
     font-size: 80px;
     line-height: 80px;
     margin-bottom: 0.8rem;
+
+    animation-iteration-count: 7;
 }
 
 h2 {
@@ -101,15 +100,22 @@ h3 {
     margin-top: 0;
 }
 
+.bounceInUp {
+    animation-delay: 7s;
+    animation-iteration-count: 1;
+}
+
+.hinge {
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+}
+
 h4 {
     font-weight: bold;
     font-size: 30px;
 }
 
-
-.footer-bottom p {
-    text-transform: capitalize;
-}
 
 /* Wrapper, Floats & General */
 nav,
@@ -192,8 +198,10 @@ header {
 .title-content {
     width: 480px;
     margin: 0 auto;
-    top: 35%;
+    top: 20%;
     transform: translateY(-50%);
+
+    animation-iteration-count: 7;
 }
 
 .social-list {
@@ -204,7 +212,28 @@ header {
 }
 
 .social-list li {
-    padding-bottom: 10px;
+    padding-bottom: 8px;
+    margin: 5px 0;
+    position: relative;
+}
+
+.social-list li:hover,
+.social-list li a:focus {
+    color: #9200FF;
+}
+
+.social-list a:hover::after,
+.social-list a:focus::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: 1px solid #FFFFFF;
+}
+
+.social-list i {
+    font-size: 1.5rem;
 }
 
 
@@ -214,7 +243,14 @@ nav .float-list a {
     padding: 3px 30px;
 }
 
-nav a:hover::after {
+nav a:hover,
+nav a:focus {
+    color: #9200FF;
+    /* font-weight: bold; */
+}
+
+nav a:hover::after,
+nav a:focus::after {
     content: "";
     border: 1px solid #FFFFFF;
     position: absolute;
@@ -301,10 +337,6 @@ input {
     padding: 10px 25px;
 }
 
-.button-style:hover {
-    border: 1px solid #FFFFFF;
-}
-
 .button-style {
     color: inherit;
     background-color: #9200FF;
@@ -326,25 +358,13 @@ input[type="submit"] {
     z-index: 2;
 }
 
-
-/* Contact Section */
-
-.contact {
-    min-width: 1184px;
-}
-
-.contact ul {
-    width: 70%;
-    margin: 0 auto;
-}
-
-.contact li {
-    width: calc((100% - 24%) / 3);
-    min-width: 210px;
-}
-
-.contact i {
-    font-size: 45px;
+.button-style:hover,
+.button-style:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    color: #9200FF;
+    background-color: #FFFFFF;
+    text-decoration: underline;
 }
 
 
@@ -355,7 +375,7 @@ input[type="submit"] {
 }
 
 .ticket h2 {
-    margin-top: 6px;
+    margin-top: -10px;
 }
 
 .ticket-image {
@@ -366,6 +386,39 @@ input[type="submit"] {
 .ticket-content-description {
     width: 80%;
     padding-left: 5%;
+}
+
+
+/* Contact Section */
+
+.contact ul {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contact li {
+    width: calc((100% - 24%) / 3);
+}
+
+.contact a:hover,
+.contact a:focus {
+    transform: scale(1.1);
+}
+
+.contact a:hover::before,
+.contact a:hover::after,
+.contact a:focus::before,
+.contact a:focus::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 1px solid #FFFFFF;
+}
+
+.contact i {
+    font-size: 45px;
+    margin-top: 40px;
 }
 
 
@@ -395,10 +448,118 @@ footer p {
     margin: 0;
 }
 
+.footer-bottom p {
+    text-transform: capitalize;
+}
+
 address {
     font-style: inherit;
 }
 
+.email-address:hover,
+.phone-number:hover,
+.email-address:focus,
+.phone-number:focus {
+    font-weight: bold;
+}
+
+
 .footer-bottom {
     padding: 10px 0;
+}
+
+
+/* Media Queries */
+
+
+@media (max-width: 1480px) {
+    
+    .wrapper {
+        width: 90%;
+    }
+    .text-content-left {
+        left: 5%;
+    }
+    
+    .text-content-right {
+        right: 5%;
+    }
+    
+    .text-content-left {
+        top: 45%;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .text-content-left {
+        top: 35%;
+    }
+
+    .text-content-right {
+        top: 45%;
+    }
+
+    .contact ul {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1180px) {
+    
+    .content {
+        padding: 50px 0;
+    }
+
+    .content-image {
+        width: 40%;
+        float: left;
+    }
+
+    .content-description {
+        width: 55%;
+        /* padding-bottom: 80px; */
+        float: left;
+    }
+
+    .text-content-left,
+    .text-content-right {
+        position: static;
+        transform: initial;
+        /* padding-top: 10px; */
+        padding-left: 5%;
+    }
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 850px) {
+    .mobile-hide {
+        display: none;
+    }
+
+    .contact ul {
+        width: 100%;
+    }
+
+    .contact li {
+        margin: 0 1%;
+        width: calc((100% - 6%) / 3);
+    }
+
+    .gram li {
+        width: calc((100% - 4%) / 2);
+    }
+
+    .gram li:nth-of-type(2) {
+        margin-right: 0;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project 1: Thunder Force Stadium</title>
     <link href="https://fonts.googleapis.com/css?family=Iceberg|Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,9 +19,10 @@
                 <li><a href="">contact</a></li>
             </ul>
         </nav>
-        <div class="title-content position-relative">
-            <h1>thunder force stadium</h1>
-            <h3>presented by hot cops</h3>
+        <div class="title-content position-relative animated shake delay-0.8s">
+            <h1 class="animated bounce delay-0.8s">thunder force stadium</h1>
+            <h3 class="animated bounceInUp">presented by hot cops</h3>
+            <h3 class="animated hinge" aria-hidden="true">presented by hot cops</h3>
         </div>
         <div class="mobile-hide social-list center-align">
             <ul>
@@ -78,7 +80,7 @@
             <div class="ticket-image float-left">
                 <img src="./assets/small-square.jpg" alt="full concert stage view from guest seating, fans going wild">
             </div>
-            <div class="ticket-content-description wrapper float-right">
+            <div class="ticket-content-description float-right">
                 <h2>get your tickets</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam consectetur mollitia deleniti, fugiat
                 perferendis veniam aliquam eius debitis eaque rerum. Alias recusandae delectus aut voluptatum. Adipisci labore
@@ -119,7 +121,7 @@
             <li>
                 <img src="./assets/gallery-image-2.jpg" alt="dimmed lighting and light fog smoke covers live performance of feature band">
             </li>
-            <li>
+            <li class="mobile-hide">
                 <img class="mobile-hide" src="./assets/gallery-image-3.jpg" alt="plate of chicken wings with feature dip, available at the venue">
             </li>
         </ul>
@@ -138,7 +140,7 @@
                 <div class="float-left footer-subcontent">
                     <h2>contact</h2>
                     <address>
-                        <p><a href="mailto:info@email.com">info@email.com</a> | <a href="tel:+11234567890">123 - 456 - 7890</a></p>
+                        <p><a class="email-address" href="mailto:info@email.com">info@email.com</a> | <a class="phone-number" href="tel:+11234567890">123 - 456 - 7890</a></p>
                         <p>123 some road, Toronto, ON</p>
                         <p>A5A 5A5, Canada</p>
                     </address>
