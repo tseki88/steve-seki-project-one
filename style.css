@@ -101,11 +101,18 @@ h3 {
 }
 
 .bounceInUp {
-    animation-delay: 7s;
+    animation-duration: 1.5s;
+    animation-delay: 7.5s;
     animation-iteration-count: 1;
 }
 
 .hinge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+
     animation-duration: 2s;
     animation-delay: 5s;
     animation-iteration-count: 1;
@@ -135,6 +142,7 @@ ul.float-list,
 .footer-top nav {
     clear: both;
 }
+
 
 .float-left,
 .float-list,
@@ -188,11 +196,17 @@ nav,
 
 /* Header */
 
+
 header {
     height: 100vh;
     background-image: url(./assets/header-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top right;
+}
+
+nav {
+    overflow: hidden;
 }
 
 .title-content {
@@ -219,7 +233,7 @@ header {
 
 .social-list li:hover,
 .social-list li a:focus {
-    color: #9200FF;
+    font-weight: bold;
 }
 
 .social-list a:hover::after,
@@ -229,7 +243,8 @@ header {
     right: 0;
     left: 0;
     bottom: 0;
-    border: 1px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 0;
 }
 
 .social-list i {
@@ -240,13 +255,12 @@ header {
 /* Nav and General List Styling */
 
 nav .float-list a {
-    padding: 3px 30px;
+    padding: 0 30px;
 }
 
 nav a:hover,
 nav a:focus {
-    color: #9200FF;
-    /* font-weight: bold; */
+    font-weight: bold;
 }
 
 nav a:hover::after,
@@ -411,8 +425,8 @@ input[type="submit"]:focus {
 .contact a:focus::after {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 10%;
+    right: 10%;
     border: 1px solid #FFFFFF;
 }
 
@@ -425,7 +439,7 @@ input[type="submit"]:focus {
 /* Gram Section */
 
 .gram h2 {
-    margin: 80px;
+    margin: 80px 0;
 }
 
 .gram ul {
@@ -518,7 +532,6 @@ address {
 
     .content-description {
         width: 55%;
-        /* padding-bottom: 80px; */
         float: left;
     }
 
@@ -526,7 +539,6 @@ address {
     .text-content-right {
         position: static;
         transform: initial;
-        /* padding-top: 10px; */
         padding-left: 5%;
     }
 }
@@ -534,32 +546,187 @@ address {
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
-}
+    .float-left,
+    .float-right {
+        float: none;
+    }
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 850px) {
-    .mobile-hide {
-        display: none;
+    header {
+        height: 100vh;
+        position: relative;
+    }
+    
+    header:before {
+        content: "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        background-image: url(./assets/header-image.jpg);
+        filter: brightness(1.8);
+        background-position: top right;
+        background-size: cover;
+    }
+
+    .title-content {
+        transform: initial;
+        top: 40%;
+        width: 400px;
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 4.5rem;
+        line-height: 70px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .content-image,
+    .ticket-image,
+    .footer-subcontent {
+        width: 100%;
+    }
+    
+    .content-image {
+        max-height: 450px;
+    }
+
+    .content-image img {
+        object-fit: cover;
+    }
+
+    .content-description,
+    .ticket-content-description {
+        width: 100%;
+        padding: 50px 0 0;
+    }
+
+    button.button-style {
+        margin: 50px auto;
+        display: block;
+    }
+
+    .text-content-left,
+    .text-content-right {
+        padding: 0 5%;
+    }
+
+    .ticket,
+    .contact {
+        padding: 40px 0;
     }
 
     .contact ul {
         width: 100%;
     }
-
+    
     .contact li {
-        margin: 0 1%;
-        width: calc((100% - 6%) / 3);
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .contact a:hover::before,
+    .contact a:hover::after,
+    .contact a:focus::before,
+    .contact a:focus::after {
+        left: 35%;
+        right: 35%;
+    }
+
+    .mobile-hide {
+        display: none;
+        visibility: hidden;
+    }
+    
+    .gram {
+        padding-bottom: 40px;
     }
 
     .gram li {
         width: calc((100% - 4%) / 2);
     }
-
+    
     .gram li:nth-of-type(2) {
         margin-right: 0;
     }
+
+    .footer-top {
+        padding: 0;
+    }
+
+    footer .footer-top nav a {
+        padding: 3px 8px;
+    }
+
+    .footer-subcontent {
+        padding: 30px 0;
+    }
+
+    .footer-subcontent,
+    input[type="email"] {
+        text-align: center;
+    }
+    
+    input.button-style {
+        position: static;
+        width: 100%;
+        margin-top: 5px;
+    }
+
 }
 
-/* Landscape phones and down */
+@media (max-width: 700px) {
+    header::before {
+        background-position: top left 20%;
+    }
+}
+
+
 @media (max-width: 480px) {
+    
+    header {
+        height: 100vh;
+    }
+
+    .title-content {
+        width: 320px;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+        line-height: 60px;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    footer .footer-top nav a {
+        padding: 3px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .title-content {
+        width: 300px;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
 }
