@@ -178,6 +178,7 @@ nav,
     margin: 0 4%;
 }
 
+nav,
 .contact,
 .gram {
     overflow: hidden;
@@ -196,17 +197,12 @@ nav,
 
 /* Header */
 
-
 header {
     height: 100vh;
     background-image: url(./assets/header-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
-}
-
-nav {
-    overflow: hidden;
 }
 
 .title-content {
@@ -485,9 +481,7 @@ address {
 
 /* Media Queries */
 
-
-@media (max-width: 1480px) {
-    
+@media (max-width: 1480px) {    
     .wrapper {
         width: 90%;
     }
@@ -505,7 +499,6 @@ address {
 }
 
 @media (max-width: 1280px) {
-
     .text-content-left {
         top: 35%;
     }
@@ -520,7 +513,6 @@ address {
 }
 
 @media (max-width: 1180px) {
-    
     .content {
         padding: 50px 0;
     }
@@ -543,8 +535,6 @@ address {
     }
 }
 
-
-/* Portrait tablet and small desktops */
 @media (max-width: 940px) {
     .float-left,
     .float-right {
@@ -589,7 +579,8 @@ address {
         font-size: 1.8rem;
     }
 
-    .content {
+    .content,
+    .footer-top {
         padding: 0;
     }
 
@@ -662,10 +653,6 @@ address {
         margin-right: 0;
     }
 
-    .footer-top {
-        padding: 0;
-    }
-
     footer .footer-top nav a {
         padding: 3px 8px;
     }
@@ -684,7 +671,6 @@ address {
         width: 100%;
         margin-top: 5px;
     }
-
 }
 
 @media (max-width: 700px) {
@@ -693,9 +679,7 @@ address {
     }
 }
 
-
 @media (max-width: 480px) {
-    
     header {
         height: 100vh;
     }
@@ -719,7 +703,6 @@ address {
 }
 
 @media (max-width: 380px) {
-
     .title-content {
         width: 300px;
     }
@@ -728,5 +711,4 @@ address {
         width: 100%;
         text-align: center;
     }
-
 }
