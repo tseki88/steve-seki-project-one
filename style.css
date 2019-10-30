@@ -624,6 +624,11 @@ header {
 
 /* Nav and General List Styling */
 
+.navButton,
+.nav-toggle {
+    display: none;
+}
+
 nav .float-list a {
     padding: 0 30px;
 }
@@ -859,6 +864,11 @@ address {
     .wrapper {
         width: 90%;
     }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
     .text-content-left {
         left: 5%;
     }
@@ -873,10 +883,6 @@ address {
 }
 
 @media (max-width: 1280px) {
-    .text-content-left {
-        top: 35%;
-    }
-
     .text-content-right {
         top: 45%;
     }
@@ -886,7 +892,7 @@ address {
     }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1180px) {   
     .content {
         padding: 50px 0;
     }
@@ -911,7 +917,9 @@ address {
 
 @media (max-width: 940px) {
     .float-left,
-    .float-right {
+    .float-right,
+    header nav ul.float-list,
+    header nav ul.float-list li {
         float: none;
     }
 
@@ -923,7 +931,7 @@ address {
     header:before {
         content: "";
         position: absolute;
-        top: 0; 
+        top: 10; 
         left: 0;
         width: 100%; 
         height: 100%;
@@ -951,6 +959,55 @@ address {
 
     h3 {
         font-size: 1.8rem;
+    }
+
+    header  {
+        position: relative;
+    }
+
+    header>nav.navi {
+        background-color: #9200FF;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: scale(0);
+        transform-origin: top;
+        margin: 100px 0;
+        z-index: 10;
+    }
+
+    header nav ul li {
+        float: none;
+        border: none;
+        margin: 2rem 0;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    header nav a:hover::after,
+    header nav a:focus::after {
+        left: 40%;
+        right: 40%;
+    }
+
+    .navButton {
+        display: block;
+        color: #FFFFFF;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        font-size: 1.5rem;
+        transition: transform 300ms ease-in-out;
+    }
+    
+    .nav-toggle:checked ~ nav {
+        transform: scale(1,1);
+    }
+
+    .nav-toggle:checked ~ .navButton{
+        transform: rotate(90deg);
     }
 
     .content,
@@ -1055,6 +1112,10 @@ address {
     header::before {
         background-position: top left 20%;
     }
+
+    nav {
+        transition: transform 300ms ease-in-out; 
+    }
 }
 
 @media (max-width: 480px) {
@@ -1090,3 +1151,5 @@ address {
         text-align: center;
     }
 }
+
+
